@@ -24,6 +24,7 @@
 <body>
 <article class="page-container">
 	<h2>克拉维权报名:</h2>
+	<p>应业主隐私保护要求, 本次报名将不采集姓名及手机号!</p>
 	<form class="form form-horizontal" id="form-admin-add">
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>楼号-门牌号：</label>
@@ -32,17 +33,27 @@
 			</div>
 		</div>
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>你的姓名：</label>
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>是否能去现场：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="" placeholder="" id="name" name="name">
+				<label for="a"><input type="radio" name="is_go" id="a" value="1" checked> 能去现场</label>
+				<br/>
+				<label for="b"><input type="radio" name="is_go" id="b" value="0"> 到不了现场</label>
+				<!--<input type="radio" name="is_go" id="is_go" value="0"> -->
+				<!--<input type="text" class="input-text" value="" placeholder="" id="name" name="name">-->
 			</div>
 		</div>
-		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>联系手机：</label>
-			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="" placeholder="" id="mobile" name="mobile">
-			</div>
-		</div>
+		<!--<div class="row cl">-->
+			<!--<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>你的姓名：</label>-->
+			<!--<div class="formControls col-xs-8 col-sm-9">-->
+				<!--<input type="text" class="input-text" value="" placeholder="" id="name" name="name">-->
+			<!--</div>-->
+		<!--</div>-->
+		<!--<div class="row cl">-->
+			<!--<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>联系手机：</label>-->
+			<!--<div class="formControls col-xs-8 col-sm-9">-->
+				<!--<input type="text" class="input-text" value="" placeholder="" id="mobile" name="mobile">-->
+			<!--</div>-->
+		<!--</div>-->
 	</div>
 	<div class="row cl">
 		<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
@@ -76,14 +87,14 @@ $(function(){
                 required:true,
                 minlength:2,
                 maxlength:4
-            },
-            local:{
-                required:true
-            },
-			mobile:{
-				required:true,
-				isPhone:true
-			}
+            }
+//            local:{
+//                required:true
+//            },
+//			mobile:{
+//				required:true,
+//				isPhone:true
+//			}
 		},
 		onkeyup:false,
 		focusCleanup:true,

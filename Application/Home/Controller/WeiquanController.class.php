@@ -19,7 +19,7 @@ class WeiquanController extends Controller
     public function index()
     {
         $where = [];
-        $Model = M('weiquan');
+        $Model = M('weiquan2');
         $list = $Model->where($where)->select();
         $sum = $Model->where($where)->count();
 //        p($list,1);
@@ -31,9 +31,11 @@ class WeiquanController extends Controller
     public function add()
     {
         if (IS_POST) {
-            $req = I('post.');
+            $req         = I('post.');
+            $req['time'] = time();
+//            p($req,1);
             if (!empty($req)) {
-                $res = M('weiquan')->add($req);
+                $res = M('weiquan2')->add($req);
                 if ($res) {
                     $this->ajaxReturn([
                         'code'   => 200,
