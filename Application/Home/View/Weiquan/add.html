@@ -33,6 +33,18 @@
 			</div>
 		</div>
 		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>姓名：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" value="" placeholder="请输入你的楼号和房间号" id="name" name="name">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>手机号：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" value="" placeholder="请输入你的楼号和房间号" id="mobile" name="mobile">
+			</div>
+		</div>
+		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>是否能去现场：</label>
 			<div class="formControls col-xs-8 col-sm-9">
 				<label for="a"><input type="radio" name="is_go" id="a" value="1" checked> 能去现场</label>
@@ -67,7 +79,7 @@
 <script type="text/javascript" src="__PUBLIC__/lib/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="__PUBLIC__/lib/layer/2.4/layer.js"></script>
 <script type="text/javascript" src="__PUBLIC__/static/h-ui/js/H-ui.min.js"></script>
-<script type="text/javascript" src="static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="__PUBLIC__/static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
 
 <!--请在下方写此页面业务相关的脚本-->
 <script type="text/javascript" src="__PUBLIC__/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
@@ -87,14 +99,14 @@ $(function(){
                 required:true,
                 minlength:2,
                 maxlength:4
-            }
-//            local:{
-//                required:true
-//            },
-//			mobile:{
-//				required:true,
-//				isPhone:true
-//			}
+            },
+            local:{
+                required:true
+            },
+			mobile:{
+				required:true,
+				isPhone:true
+			}
 		},
 		onkeyup:false,
 		focusCleanup:true,
